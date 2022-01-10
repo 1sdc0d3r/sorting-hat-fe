@@ -8,7 +8,7 @@ import {
 export const getTracks = () => dispatch => {
   dispatch({ type: TRACKS_GET_START });
   axios
-    .get("https://tech-sorting-hat.herokuapp.com/api/tracks")
+    .get("https://tech-sorting-hat1.herokuapp.com/api/tracks")
     .then(res => dispatch({ type: TRACKS_GET_SUCCESS, payload: res.data }))
     .catch(err => dispatch({ type: TRACKS_GET_FAIL, payload: err }));
 };
